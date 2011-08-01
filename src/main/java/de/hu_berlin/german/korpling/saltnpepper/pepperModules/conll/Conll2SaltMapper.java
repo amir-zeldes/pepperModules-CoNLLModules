@@ -140,7 +140,7 @@ public class Conll2SaltMapper{
 	private void logDebug  (String logText) { this.log(LogService.LOG_DEBUG,   logText); }
 	//----------------------------------------------------------
 	
-	public void convert(SDocument sDocument) {
+	public void map(SDocument sDocument) {
 		
 		TupleReader tupleReader = TupleConnectorFactory.fINSTANCE.createTupleReader();
 		// try reading the input file 
@@ -397,9 +397,9 @@ public class Conll2SaltMapper{
 		primaryText.deleteCharAt(primaryText.length()-1);
 		sTextualDS.setSText(primaryText.toString());
 		
-	} // convert()
+	} // map()
 
-} // ConllDep2SaltMapper
+} // Conll2SaltMapper
 
 
 

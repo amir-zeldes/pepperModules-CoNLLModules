@@ -135,7 +135,7 @@ public class CoNLLImporter extends PepperImporterImpl implements PepperImporter
 				conll2SaltMapper.setProperties(this.getSpecialParams());
 				conll2SaltMapper.setLogService(this.getLogService());
 				conll2SaltMapper.setInFile(uri);
-				conll2SaltMapper.convert((SDocument)sElementId.getSIdentifiableElement());
+				conll2SaltMapper.map((SDocument)sElementId.getSIdentifiableElement());
 			}
 		
 		}//only if given sElementId belongs to an object of type SDocument or SCorpus

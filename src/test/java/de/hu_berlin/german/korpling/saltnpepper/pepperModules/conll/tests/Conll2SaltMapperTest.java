@@ -127,7 +127,7 @@ public class Conll2SaltMapperTest extends TestCase {
 	
 	public final void testTokens() {
 		getFixture().setInFile(testFileURI);
-		getFixture().convert(SaltCommonFactory.eINSTANCE.createSDocument());
+		getFixture().map(SaltCommonFactory.eINSTANCE.createSDocument());
 		
 		//check whetcher number of tokens is correct
 		assertEquals(Array.getLength(tokenAnnotationNamesExpected), getFixture().getSDocumentGraph().getSTokens().size());
@@ -176,7 +176,7 @@ public class Conll2SaltMapperTest extends TestCase {
 	
 	public final void testTextualRelations() {
 		getFixture().setInFile(testFileURI);
-		getFixture().convert(SaltCommonFactory.eINSTANCE.createSDocument());
+		getFixture().map(SaltCommonFactory.eINSTANCE.createSDocument());
 
 		STextualDS textualDS = getFixture().getSDocumentGraph().getSTextualDSs().get(0);
 		
@@ -197,7 +197,7 @@ public class Conll2SaltMapperTest extends TestCase {
 	
 	public final void testSpans() {
 		getFixture().setInFile(testFileURI);
-		getFixture().convert(SaltCommonFactory.eINSTANCE.createSDocument());
+		getFixture().map(SaltCommonFactory.eINSTANCE.createSDocument());
 
 		int spanIndex = 0;
 		for (SSpan span : getFixture().getSDocumentGraph().getSSpans()) {
@@ -215,7 +215,7 @@ public class Conll2SaltMapperTest extends TestCase {
 	
 	public final void testSpanningRelations() {
 		getFixture().setInFile(testFileURI);
-		getFixture().convert(SaltCommonFactory.eINSTANCE.createSDocument());
+		getFixture().map(SaltCommonFactory.eINSTANCE.createSDocument());
 		
 		int spanRelIndex = 0;
 		for (SSpanningRelation spanRel : getFixture().getSDocumentGraph().getSSpanningRelations()) {
@@ -232,7 +232,7 @@ public class Conll2SaltMapperTest extends TestCase {
 	
 	public final void testPointingRelations() {
 		getFixture().setInFile(testFileURI);
-		getFixture().convert(SaltCommonFactory.eINSTANCE.createSDocument());
+		getFixture().map(SaltCommonFactory.eINSTANCE.createSDocument());
 
 		boolean projectivity = getFixture().getProperties().getProperty("conll.considerProjectivity", "NO").equals("YES");
 		int proFactor = 1; 
